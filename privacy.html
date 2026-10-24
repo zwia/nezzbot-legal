@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>nezzbot Privacy Policy</title>
+  <meta name="description" content="Privacy Policy of the nezzbot Discord bot.">
+  <style>
+    :root {
+      --bg: #0e0f13;
+      --panel: #16181d;
+      --border: #262930;
+      --text: #d7d9de;
+      --muted: #8b8f98;
+      --heading: #ffffff;
+      --accent: #8b7cff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--bg);
+    }
+
+    body {
+      margin: 0;
+      padding: 0 16px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.7;
+    }
+
+    header,
+    main,
+    footer {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 32px 0 16px;
+    }
+
+    .brand {
+      color: var(--heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 16px;
+    }
+
+    nav span {
+      color: var(--muted);
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav span.active {
+      color: var(--heading);
+      border-bottom-color: var(--accent);
+    }
+
+    main {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      margin: 0 0 4px;
+      color: var(--heading);
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    h2 {
+      margin: 32px 0 8px;
+      color: var(--heading);
+      font-size: 1.2rem;
+    }
+
+    h3 {
+      margin: 20px 0 4px;
+      color: var(--heading);
+      font-size: 1rem;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 0 0 12px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    .updated {
+      margin-bottom: 24px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      padding: 0 0 40px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="brand">nezzbot</span>
+    <nav>
+      <span>Terms of Service</span>
+      <span class="active">Privacy Policy</span>
+    </nav>
+  </header>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: October 24, 2026</p>
+
+    <p>This Privacy Policy explains what data nezzbot ("the bot", "we", "us") collects, why, how long it is kept, and how you can have it removed. By adding nezzbot to a server or using its dashboard, you agree to this policy.</p>
+
+    <h2>1. Data we collect</h2>
+    <p>nezzbot only processes data needed to provide its moderation, anti-nuke, logging, welcome and role features.</p>
+
+    <h3>Configuration data</h3>
+    <ul>
+      <li>Discord IDs of servers, channels, roles and users that are referenced in settings.</li>
+      <li>Settings of each module (prefix, thresholds, whitelists, log channels, autoroles, welcome messages).</li>
+    </ul>
+
+    <h3>Moderation data</h3>
+    <ul>
+      <li>Moderation cases: warns, mutes, bans, kicks and jails, including the target user ID, the moderator ID, the reason and the timestamp.</li>
+      <li>Anti-nuke events: the user ID of the actor, the type of action, the timestamp and the punishment applied.</li>
+    </ul>
+
+    <h3>Message logs</h3>
+    <ul>
+      <li>When the logging module is enabled, the content, author ID, channel ID and attachment links of deleted and edited messages.</li>
+      <li>Message content is stored for a maximum of 7 days and then permanently deleted.</li>
+      <li>nezzbot does not store messages for any other purpose. Message content is otherwise processed in memory only, for example to detect spam or blocked links.</li>
+    </ul>
+
+    <h3>Server structure backups</h3>
+    <ul>
+      <li>When the anti-nuke module is enabled, a copy of the server structure: channels, categories, roles, permission overwrites and their names and ordering.</li>
+      <li>Backups contain no message history and no member lists.</li>
+    </ul>
+
+    <h3>Dashboard data</h3>
+    <ul>
+      <li>When you log in to the dashboard with Discord, we receive your user ID, username, avatar and the list of servers you belong to, along with your permissions in them. This is used only to show the servers you can manage.</li>
+      <li>Session data is stored in a cookie and on our servers until you log out or the session expires.</li>
+    </ul>
+
+    <p>We do not collect email addresses, passwords, payment details or direct messages. We do not sell or share data with advertisers.</p>
+
+    <h2>2. How we use data</h2>
+    <ul>
+      <li>To run the features you enabled on your server.</li>
+      <li>To enforce moderation and anti-nuke settings.</li>
+      <li>To let server administrators view and change settings in the dashboard.</li>
+      <li>To prevent abuse of the bot and to fix errors.</li>
+    </ul>
+
+    <h2>3. Storage and security</h2>
+    <p>Data is stored in a PostgreSQL database and a Redis cache operated by us. Access is limited to the bot operator. We use reasonable technical measures to protect data, but no system is completely secure.</p>
+
+    <h2>4. Retention and deletion</h2>
+    <ul>
+      <li>Message logs: deleted automatically after 7 days.</li>
+      <li>When nezzbot is removed from a server, all data for that server (settings, moderation cases, backups and logs) is deleted immediately.</li>
+      <li>Dashboard sessions are deleted when you log out or when they expire.</li>
+      <li>You can request deletion of data about you at any time through the support server. Verified requests are completed within 30 days.</li>
+    </ul>
+
+    <h2>5. Data sharing</h2>
+    <p>Data is shared only with Discord, through its API, as required for the bot to work, and with authorities when we are legally required to do so. Server administrators can see moderation cases and logs of their own server.</p>
+
+    <h2>6. Children</h2>
+    <p>Discord requires users to meet a minimum age. nezzbot is not directed to children, and we do not knowingly collect data from users below the minimum age required by Discord.</p>
+
+    <h2>7. Your rights</h2>
+    <p>You may ask us to tell you what data we hold about you, to correct it, or to delete it. Contact us through the support server.</p>
+
+    <h2>8. Changes</h2>
+    <p>We may update this policy. The date at the top shows the latest revision. Continued use of the bot after a change means you accept the updated policy.</p>
+
+    <h2>9. Contact</h2>
+    <p>Support server: <a href="https://discord.gg/wpUJFmRtWx">https://discord.gg/wpUJFmRtWx</a></p>
+  </main>
+  <footer>nezzbot</footer>
+</body>
+</html>
