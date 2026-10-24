@@ -151,7 +151,7 @@
   </header>
   <main>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: October 25, 2026</p>
+    <p class="updated">Last updated: October 26, 2026</p>
 
     <p>This Privacy Policy explains what data nezzbot ("the bot", "we", "us") collects, why, how long it is kept, and how you can have it removed. By adding nezzbot to a server or using its dashboard, you agree to this policy.</p>
 
@@ -222,6 +222,8 @@
     <ul>
       <li>When you log in to the dashboard with Discord, we receive your user ID, username, avatar and the list of servers you belong to, along with your permissions in them. This is used only to show the servers you can manage.</li>
       <li>Session data is stored in a cookie and on our servers until you log out or the session expires.</li>
+      <li>Audit log: when you change a setting in the dashboard we store the server ID, your user ID, the module, the kind of change, the names of the changed settings (never their values) and the time.</li>
+      <li>To protect the dashboard from abuse we keep short lived counters per IP address and user ID. They expire within 10 minutes and are not used for anything else.</li>
     </ul>
 
     <p>We do not collect email addresses, passwords, payment details or direct messages. We do not sell or share data with advertisers.</p>
@@ -245,7 +247,8 @@
       <li>Snipe data: deleted automatically after 2 hours. AFK status: after 30 days.</li>
       <li>Levels, giveaway entries and other community data: kept until the server resets them or removes the bot.</li>
       <li>Your Last.fm link: kept until you remove it.</li>
-      <li>Rate limit counters expire within a minute.</li>
+      <li>Rate limit counters expire within a minute (dashboard login counters within 10 minutes).</li>
+      <li>Dashboard audit log: deleted automatically after 90 days.</li>
       <li>Dashboard sessions are deleted when you log out or when they expire.</li>
       <li>You can request deletion of data about you at any time through the support server. Verified requests are completed within 30 days.</li>
     </ul>
