@@ -151,7 +151,7 @@
   </header>
   <main>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: October 26, 2026</p>
+    <p class="updated">Last updated: October 25, 2026</p>
 
     <p>This Privacy Policy explains what data nezzbot ("the bot", "we", "us") collects, why, how long it is kept, and how you can have it removed. By adding nezzbot to a server or using its dashboard, you agree to this policy.</p>
 
@@ -188,7 +188,9 @@
     <ul>
       <li>Levels: for each member of a server with levels enabled, the user ID, experience points, level and number of messages counted. Message content is not stored.</li>
       <li>Starboard: the IDs of starred messages and of their copies. The copy is posted by the bot in the starboard channel of the server and stays in Discord.</li>
-      <li>Tickets: the ticket number, channel ID, the user ID of the member who opened it, its status and timestamps. When a ticket is closed, a transcript file is posted to the log channel chosen by the server and is not stored by us.</li>
+      <li>Tickets: the ticket number, channel ID, the user ID of the member who opened it, its status and timestamps, the staff member who claimed or closed it, the reasons given when it is claimed, closed, reopened or deleted, and the members and roles added to it. Answers you give in a ticket form and the rating you give after a ticket closes are stored with the ticket.</li>
+      <li>Ticket transcripts: when a ticket is closed or deleted, a transcript of the ticket channel is stored so that the staff of the server can read it in the dashboard. It holds up to the last 1000 messages with the time, the author's username and ID, the text, the text of embeds and the links of attachments. A copy can also be posted to the log channel chosen by the server.</li>
+      <li>Ticket settings that name people: the ticket blacklist (user or role IDs the server blocked from opening tickets) and the optional profile message of a staff member who claims tickets.</li>
       <li>Voice rooms: the channel ID of a temporary voice room and the user ID of its owner, until the room is deleted.</li>
       <li>Giveaways: the prize, the host, the user IDs of members who entered and the winners.</li>
       <li>Counting: the current number, the best number and the ID of the last member who counted.</li>
@@ -197,12 +199,19 @@
       <li>AFK status: the reason you set and the time, kept for at most 30 days or until you send a message.</li>
       <li>Deleted and edited messages for the snipe commands: the content and author of the last few deleted or edited messages of a channel, kept in memory-backed storage for at most 2 hours and visible only to members with the Manage Messages permission.</li>
       <li>Last.fm: if you link your account, your Discord user ID and your Last.fm username, until you remove the link with the unset command. The bot sends the username to the Last.fm API to show what you listen to.</li>
+      <li>Reminders: the text you asked to be reminded about, the ID of the channel and message where you asked, your user ID and the time it is due. A reminder is deleted when it is delivered or when you remove it.</li>
+      <li>Suggestions: the number, the text, the ID of the author (also when the suggestion is shown anonymously to members), the status, the reason and the ID of the reviewer, and the user IDs of members who voted with whether the vote was up or down.</li>
+      <li>Sticky messages, automatic reactions and auto publish channels: the channel IDs, the message or keyword and emojis configured by server administrators, and the ID of the member who created a sticky message.</li>
+      <li>Booster roles: the user ID of a booster and the ID of the custom role created for them, until the role is removed or the member stops boosting.</li>
+      <li>Jail: the user ID of a jailed member and the IDs of the roles that were removed, so they can be restored when the member is released.</li>
+      <li>Honeypots, staff roles and fake permissions: the IDs of channels and roles configured by server administrators and the punishment chosen for a honeypot.</li>
       <li>Premium: the server ID, the tier, the expiry and, for a subscription bought through Discord, the ID of the Discord entitlement. We never receive or store payment details, payments are handled entirely by Discord.</li>
     </ul>
 
     <h3>Direct messages and rate limits</h3>
     <ul>
       <li>When a moderator warns, mutes, jails, kicks or bans you, the bot sends you a direct message with the action, the reason, the duration and the moderator (mention, username and ID). The message is sent once and is not stored by us, apart from the moderation case described above.</li>
+      <li>Depending on the settings of the server, the bot can also send you a direct message when a ticket you opened is closed or reopened, to ask for a rating, when a reminder you set is due, and when a suggestion you made is answered. These messages are sent once and are not stored by us.</li>
       <li>To limit abuse, the bot keeps short lived counters in Redis, for example the number of bans a moderator issued in the last minute. They contain the server ID and the user ID and expire by themselves within a minute.</li>
     </ul>
 
@@ -246,6 +255,8 @@
       <li>When nezzbot is removed from a server, all data for that server (settings, moderation cases, backups, logs and community feature data) is deleted immediately.</li>
       <li>Snipe data: deleted automatically after 2 hours. AFK status: after 30 days.</li>
       <li>Levels, giveaway entries and other community data: kept until the server resets them or removes the bot.</li>
+      <li>Tickets, answers, ratings and transcripts: kept until the ticket is deleted, either by staff or automatically according to the settings of the server, or until the bot is removed from the server.</li>
+      <li>Reminders: deleted when they are delivered or removed. Suggestions and their votes: kept until the server deletes them or removes the bot. Jail data: deleted when the member is released.</li>
       <li>Your Last.fm link: kept until you remove it.</li>
       <li>Rate limit counters expire within a minute (dashboard login counters within 10 minutes).</li>
       <li>Dashboard audit log: deleted automatically after 90 days.</li>
@@ -254,7 +265,7 @@
     </ul>
 
     <h2>5. Data sharing</h2>
-    <p>Data is shared only with Discord, through its API, as required for the bot to work, with Last.fm if you link your account, with Discord's subscription system for premium, and with authorities when we are legally required to do so. Server administrators can see moderation cases and logs of their own server.</p>
+    <p>Data is shared only with Discord, through its API, as required for the bot to work, with Last.fm if you link your account, with Discord's subscription system for premium, and with authorities when we are legally required to do so. Server administrators and staff can see moderation cases, logs, tickets and ticket transcripts of their own server, according to the permissions they have there.</p>
 
     <h2>6. Children</h2>
     <p>Discord requires users to meet a minimum age. nezzbot is not directed to children, and we do not knowingly collect data from users below the minimum age required by Discord.</p>
@@ -266,7 +277,7 @@
     <p>We may update this policy. The date at the top shows the latest revision. Continued use of the bot after a change means you accept the updated policy.</p>
 
     <h2>9. Contact</h2>
-    <p>Support server: <a href="https://discord.gg/wpUJFmRtWx">https://discord.gg/wpUJFmRtWx</a></p>
+    <p>Support server: <a href="https://discord.gg/GgpfW7Bkqr">https://discord.gg/GgpfW7Bkqr</a></p>
   </main>
   <footer>nezzbot</footer>
 </body>
