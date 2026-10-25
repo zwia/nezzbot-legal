@@ -192,12 +192,11 @@
       <li>Voice rooms: the channel ID of a temporary voice room and the user ID of its owner, until the room is deleted.</li>
       <li>Giveaways: the prize, the host, the user IDs of members who entered and the winners.</li>
       <li>Counting: the current number, the best number and the ID of the last member who counted.</li>
-      <li>Autoresponders and custom commands: the texts configured by server administrators and the ID of the member who created them.</li>
+      <li>Autoresponders and custom commands: the triggers, reply texts, embed fields, restrictions to channels and roles, role and emoji actions and the other settings configured by server administrators, and the ID of the member who created them. Cooldown markers are kept in memory-backed storage for at most one hour.</li>
       <li>Reaction roles, verification and welcome settings configured by server administrators.</li>
       <li>AFK status: the reason you set and the time, kept for at most 30 days or until you send a message.</li>
       <li>Deleted and edited messages for the snipe commands: the content and author of the last few deleted or edited messages of a channel, kept in memory-backed storage for at most 2 hours and visible only to members with the Manage Messages permission.</li>
       <li>Last.fm: if you link your account, your Discord user ID and your Last.fm username, until you remove the link with the unset command. The bot sends the username to the Last.fm API to show what you listen to.</li>
-      <li>Server language of a server.</li>
       <li>Premium: the server ID, the tier, the expiry and, for a subscription bought through Discord, the ID of the Discord entitlement. We never receive or store payment details, payments are handled entirely by Discord.</li>
     </ul>
 
