@@ -238,6 +238,7 @@
     <ul>
       <li>Technical logs of the bot contain errors, Discord IDs and timestamps. They do not contain message content. Serious errors may be sent to a private channel of the operator.</li>
       <li>When the server owner changes the profile of the bot, the log records the server ID, the user ID of the owner, a hash of the new image and the text of the new bio, so that misuse can be investigated. The images themselves are not kept.</li>
+      <li>Scheduled work such as ending a temporary ban, delivering a reminder or ending a giveaway is tracked in a job queue in our database. A job holds only a job name, a server ID and a time, and finished jobs are deleted after a day (failed ones after three days).</li>
     </ul>
 
     <h3>Dashboard data</h3>
