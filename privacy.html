@@ -229,6 +229,7 @@
     <ul>
       <li>Blocked users and servers: if we block someone for abuse, we keep the ID, the reason and the date.</li>
       <li>We can message a user directly to answer a report. These messages are not stored.</li>
+      <li>We keep a log of our own actions in the admin panel, such as blocking someone, changing premium, creating a support invite or sending a direct message: who did it, the ID of the user or server it was about, the time and the result. The text of a direct message is not part of it.</li>
       <li>To look into abuse or to give support, we can create a one-time invite, valid for one hour, to a server the bot is in. It only lets us join as a regular member.</li>
       <li>Technical logs contain errors, Discord IDs and times. We don't put message content in them. Serious errors are sent to a private Discord channel of ours, and, if we have error tracking turned on, also to Sentry.</li>
       <li>When the server owner changes the bot's profile, we log the server ID, the owner's ID, a hash of the new image and the new bio, so misuse can be investigated. The images are not kept.</li>
@@ -271,6 +272,7 @@
       <li>Dashboard access lists: until the owner removes the people or removes the bot.</li>
       <li>Sessions: until you log out, 24 hours without use, or 7 days after login. Counters and permission checks: from a minute up to 10 minutes.</li>
       <li>Finished jobs are deleted after a day, failed ones after three days.</li>
+      <li>The log of our own actions in the admin panel: 180 days.</li>
       <li>When nezzbot is removed from a server, we delete all data of that server right away. If the bot was offline at that moment, we delete it the next time the bot starts.</li>
     </ul>
 
